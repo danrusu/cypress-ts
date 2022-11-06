@@ -35,30 +35,30 @@
 //   }
 // }
 
-export { }; //TODO - be able to remove this
+export {}; //TODO - be able to remove this
 
 declare global {
-    namespace Cypress {
-        interface Chainable {
-            /**
-             * Custom command to select DOM element by data-cy attribute.
-             * @example cy.dataCy('greeting')
-             */
-            dataCy(value: string): Chainable<JQuery<HTMLElement>>;
+  namespace Cypress {
+    interface Chainable {
+      /**
+       * Custom command to select DOM element by data-cy attribute.
+       * @example cy.dataCy('greeting')
+       */
+      dataCy(value: string): Chainable<JQuery<HTMLElement>>;
 
-            /**
-             * Custom command to get all h1 tags
-             * @example cy.h1()
-             */
-            h1(): Chainable<JQuery<HTMLElement>>;
-        }
+      /**
+       * Logs message to terminal prefixed by @@@
+       * @example cy.logToTerminal('hello')
+       */
+      logToTerminal(message: string): void;
     }
+  }
 }
 
 Cypress.Commands.add('dataCy', value => {
-    return cy.get(`[data-cy=${value}]`);
+  return cy.get(`[data-cy=${value}]`);
 });
 
-Cypress.Commands.add('h1', () => {
-    return cy.get('h1');
+Cypress.Commands.add('logToTerminal', message => {
+  cy.task('logToTerminal', message);
 });

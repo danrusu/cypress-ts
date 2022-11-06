@@ -4,6 +4,11 @@ describe('Simple navigation spec', () => {
   });
 
   it('should have correct header', () => {
-    cy.h1().eq(0).should('have.text', 'Kitchen Sink');
+    cy.get('h1')
+      .eq(0)
+      .should('have.text', 'Kitchen Sink')
+      .then(firstHeader => {
+        cy.logToTerminal(firstHeader.text());
+      });
   });
 });

@@ -6,8 +6,7 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "format": "prettier --config .prettierrc **/*.ts --write",
-    "lint": "tsc --noEmit --pretty"
+    "format": "prettier --config .prettierrc **/*.{ts,js,json,md} --write"
   },
   "repository": {
     "type": "git",

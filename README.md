@@ -1,4 +1,5 @@
 # cypress-ts
+
 Cypress TypeScript Template
 
 ## Configuration
@@ -7,13 +8,14 @@ Cypress TypeScript Template
 
 - [TypeScript](./tsconfig.json)
 
-
 ### Open Cypress Runner
+
 ```bash
 npx cypress open
 ```
 
 ### Run Cypress Tests
+
 ```bash
 npx cypress run
 ```
