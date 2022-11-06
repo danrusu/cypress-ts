@@ -1,11 +1,11 @@
-name: Tests
+name: Cypress Tests
 on:
   workflow_dispatch:
 jobs:
-  e2e-tests:
+  cypress-tests:
+    name: Chrome Test
     runs-on: ubuntu-20.04
 
-    name: E2E on Chrome
     steps:
       - name: Checkout
         uses: actions/checkout@v3
