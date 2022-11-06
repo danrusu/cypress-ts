@@ -1,4 +1,4 @@
-describe('Simple navigation spec', () => {
+describe('Demo spec', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io');
   });
