@@ -3,7 +3,7 @@ describe('Simple navigation spec', () => {
     cy.visit('https://example.cypress.io');
   });
 
-  it('should dave correct header', () => {
+  it('should have correct header', () => {
     cy.h1().eq(0).should('have.text', 'Kitchen Sink');
   });
 });
